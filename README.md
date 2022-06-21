@@ -15,5 +15,5 @@ docker compose up
 
 Wait for the stack to be up, then create the connector:
 ```
-curl -XPOST -H 'Content-Type: application/json' -d @connectors/fs-source-csv.json 
+curl -XPOST localhost:8083/connectors -H 'Content-Type: application/json' -d @connectors/fs-source-csv.json 
 ```
