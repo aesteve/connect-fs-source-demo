@@ -1,0 +1,16 @@
+{
+  "name": "read-from-local-csv",
+  "config": {
+    "connector.class": "com.github.mmolimar.kafka.connect.fs.FsSourceConnector",
+    "tasks.max": "1",
+    "fs.uris": "file:///tmp/samples",
+    "topic": "temperatures",
+    "policy.class": "com.github.mmolimar.kafka.connect.fs.policy.SimplePolicy",
+    "policy.batch_size": "0",
+    "policy.cleanup": "none",
+    "file_reader.class": "com.github.mmolimar.kafka.connect.fs.file.reader.CsvFileReader",
+    "file_reader.batch_size": "0",
+    "file_reader.delimited.settings.format.delimiter": ";",
+    "file_reader.delimited.settings.header": "true"
+  }
+}
